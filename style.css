@@ -24,6 +24,8 @@ background: linear-gradient(to right,
 );
 background-size: 1000% 100%;
 animation: bg 20s linear infinite;
+
+
 }
 
 @keyframes bg {
@@ -502,8 +504,6 @@ h1 {
 
 
 
-
-
 /* apply */
 .bounce-top {
   animation: bounce-top 0.15s both;
@@ -551,6 +551,13 @@ h1 {
   border-color: rgb(163, 163, 163);
 }
 
+.center-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 
 
@@ -872,3 +879,4 @@ footer p {
   box-sizing: border-box; /* Ensure padding and border are included in the width */
   margin: 20px 10px; /* Add vertical and horizontal margin to create space between items */
 }
+
