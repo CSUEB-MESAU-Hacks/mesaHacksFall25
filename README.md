@@ -38,13 +38,12 @@ Let's build something amazing together! 💪
 
 ## 📜 License
 
-Licensed under the MIT License. See [LICENSE](LICENSE) for more.
+Licensed under the MIT License. 
 
 ## 📬 Contact Us
 
 Got questions? Follow us on Instagram! 
 @mesa.u.hacks
-Or [Open an Issue](https://github.com/YourUsername/CSUEB-MESA-U-Hacks/issues) on GitHub.
 
 Let’s hack the future! 🚀
 
