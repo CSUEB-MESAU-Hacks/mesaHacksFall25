@@ -60,7 +60,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 15vh;
+  /* height: 15vh; */
 }
 
 .nav-links {
@@ -179,7 +179,7 @@ a:hover {
 /* SECTIONS */
 
 section:not(#apply) {
-  height: 96vh;
+ 
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -199,7 +199,7 @@ section#apply {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .section__pic-container {
@@ -443,7 +443,7 @@ h1 {
 
 
 .about-containers {
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
@@ -510,8 +510,7 @@ h1 {
 }
 
 #apply {
-  animation: color-change-2x 3s infinite alternate;
-  display: inline-grid;
+  animation: color-change-2x 3s infinite alternate;  
   grid-template-columns: auto auto;
   gap: 29rem;
 }
@@ -525,7 +524,6 @@ h1 {
   display : inline-block;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
   padding : 5px;
 }
 
@@ -536,11 +534,19 @@ h1 {
 .experience-container{
   margin : auto;
 }
+
 .project-img {
   border-radius: 1rem;
-  width: 90%;
+  box-shadow: 12px 12px 2px 1px rgba(44, 43, 43, 0.5);
+  width: 400px;
+  max-width: 700px;
   height: 90%;
-  padding : 5px;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* padding : 5px; */
+}
+
+.project-img:hover {
+  transform: scale(1.2); /* Adjust the scale factor as needed */
 }
 
 .project-title {
@@ -560,7 +566,7 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 45vh;
+  /* height: 45vh; */
 }
 
 .contact-info-upper-container {
@@ -639,7 +645,7 @@ h1 {
 /* FOOTER SECTION */
 
 footer {
-  height: 18vh;
+  /* height: 18vh; */
   margin: 0 1rem;
 }
 
@@ -854,7 +860,7 @@ footer p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+  /* height: 100vh; Full viewport height */
   text-align: center;
 }
 
