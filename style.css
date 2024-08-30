@@ -41,6 +41,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll */ 
+}
+
 p {
   color: rgb(85, 85, 85);
 }
@@ -253,7 +258,7 @@ section#apply {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin-bottom: 0rem;
   margin-top: 0rem;
-  color: #a33535eb; /* Change this to the desired text color */
+  color: #fff; /* Change this to the desired text color */
 }
 
 .section__text__p1::after {
@@ -352,6 +357,11 @@ h1 {
   display: block;
   justify-content: center;
   gap: 1rem;
+}
+
+.btn-container3 {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
@@ -517,14 +527,18 @@ h1 {
 
 
 
-
 /* Schedule SECTION */
 
 #schedule {
-  display : inline-block;
+  display : flex;
   justify-content: center;
   flex-direction: column;
   padding : 5px;
+}
+
+.about-containers{
+  display: flex;
+  justify-content: center;
 }
 
 .color-container {
@@ -543,6 +557,8 @@ h1 {
   height: 90%;
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   /* padding : 5px; */
+  display: flex;
+  justify-content: center;
 }
 
 .project-img:hover {
