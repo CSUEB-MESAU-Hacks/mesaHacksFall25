@@ -24,6 +24,8 @@ background: linear-gradient(to right,
 );
 background-size: 1000% 100%;
 animation: bg 20s linear infinite;
+
+
 }
 
 @keyframes bg {
@@ -37,6 +39,11 @@ animation: bg 20s linear infinite;
 
 html {
   scroll-behavior: smooth;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll */ 
 }
 
 p {
@@ -251,7 +258,7 @@ section#apply {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin-bottom: 0rem;
   margin-top: 0rem;
-  color: #a33535eb; /* Change this to the desired text color */
+  color: #fff; /* Change this to the desired text color */
 }
 
 .section__text__p1::after {
@@ -350,6 +357,11 @@ h1 {
   display: block;
   justify-content: center;
   gap: 1rem;
+}
+
+.btn-container3 {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
@@ -502,8 +514,6 @@ h1 {
 
 
 
-
-
 /* apply */
 .bounce-top {
   animation: bounce-top 0.15s both;
@@ -517,14 +527,18 @@ h1 {
 
 
 
-
 /* Schedule SECTION */
 
 #schedule {
-  display : inline-block;
+  display : flex;
   justify-content: center;
   flex-direction: column;
   padding : 5px;
+}
+
+.about-containers{
+  display: flex;
+  justify-content: center;
 }
 
 .color-container {
@@ -543,6 +557,8 @@ h1 {
   height: 90%;
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   /* padding : 5px; */
+  display: flex;
+  justify-content: center;
 }
 
 .project-img:hover {
@@ -557,6 +573,13 @@ h1 {
   color: black;
 }
 
+.center-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 
 
@@ -878,3 +901,4 @@ footer p {
   box-sizing: border-box; /* Ensure padding and border are included in the width */
   margin: 20px 10px; /* Add vertical and horizontal margin to create space between items */
 }
+
