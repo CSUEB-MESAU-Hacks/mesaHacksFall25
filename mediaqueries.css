@@ -108,6 +108,7 @@
   footer {
     height: 40vh;
   }
+
   article {
     font-size: 1rem;
   }
@@ -120,8 +121,19 @@
   .btn-container {
     flex-wrap: wrap;
   }
+
+  #contact {
+    display: flex;
+    justify-content: left;
+    width: 200px;
+    height: auto;
+  }
+
   .contact-info-container {
+    display: flex;
+    justify-content: center;
     margin: 0;
+    width: 100%;
   }
   .contact-info-container p,
   .nav-links li a {
