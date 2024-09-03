@@ -35,6 +35,15 @@
   #desktop-nav .logo img {
     width: 120px; height: auto;
   }
+
+  #socials-container {
+    display: none;
+  }
+
+  #apply-button {
+    display: none;
+  }
+
   #desktop-nav {
     justify-content: space-between;
   }
