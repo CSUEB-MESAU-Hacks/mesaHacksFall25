@@ -102,3 +102,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Set the date we're counting down to
+  var countDownDate = new Date("Sep 13, 2024 09:15:00").getTime();
+
+  // Create a message element
+  var messageElement = document.createElement("div");
+  messageElement.id = "countdown-message";
+  messageElement.style.textAlign = "center";
+  messageElement.style.fontSize = "50px";
+  messageElement.style.fontWeight = "bold";
+  messageElement.style.marginBottom = "20px";
+  document.getElementById("countdown-timer").insertAdjacentElement('beforebegin', messageElement);
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+    // Get current date + time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes, and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    // Display the result in the respective elements
+    document.getElementById("days").innerHTML = ("0" + days).slice(-2);
+    document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
+    document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
+
+    // If the countdown is finished, display a message and stop the countdown
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("days").innerHTML = "00";
+      document.getElementById("hours").innerHTML = "00";
+      document.getElementById("minutes").innerHTML = "00";
+      messageElement.innerHTML = "Time to Hack!";
+    }
+  }, 1000);
+});
