@@ -152,3 +152,22 @@
     font-size: 2rem;
   }
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .time-box {
+    width: 8em; /* Adjust width for smaller screens */
+    height: 8em; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #countdown-timer {
+    flex-direction: column; /* Stack items vertically on very small screens */
+  }
+
+  .time-box {
+    width: 6em; /* Adjust width for smaller screens */
+    height: 6em; /* Adjust height for smaller screens */
+  }
+}
