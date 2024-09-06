@@ -266,7 +266,7 @@ section#apply {
 .section__text__p1 {
   text-align: center;
   font-size: 2rem;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 0rem;
   margin-top: 0rem;
   color: #fff; /* Change this to the desired text color */
@@ -282,7 +282,7 @@ section#apply {
 }
 .section__text__p2 {
   text-align: center;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   margin-bottom: 2.5rem;
   color: #a33535eb;
