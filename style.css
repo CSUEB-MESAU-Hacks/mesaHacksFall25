@@ -848,11 +848,15 @@ footer p {
   
 }
 
-.faq-answer {
+.faq-answer{
   display: none;
   padding: 1rem;
-  background-color: #fff;
+  background-color: #ffffff;
   border-top: 1px solid #ccc;
+}
+
+.faq-answer p {
+  color: black;
 }
 
 /* sections */
@@ -934,4 +938,3 @@ footer p {
   box-sizing: border-box; /* Ensure padding and border are included in the width */
   margin: 20px 10px; /* Add vertical and horizontal margin to create space between items */
 }
-
