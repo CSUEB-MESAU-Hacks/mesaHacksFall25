@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Set the date we're counting down to
-  var countDownDate = new Date("Sep 13, 2024 09:15:00").getTime();
+  var countDownDate = new Date("Sep 13, 2024 14:30:00").getTime();
 
   // Create a message element
   var messageElement = document.createElement("div");
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById("days").innerHTML = "00";
       document.getElementById("hours").innerHTML = "00";
       document.getElementById("minutes").innerHTML = "00";
-      messageElement.innerHTML = "Time to Hack!";
+      messageElement.innerHTML = "Let the hackathon begin!";
     }
   }, 1000);
 });
