@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById("days").innerHTML = "00";
       document.getElementById("hours").innerHTML = "00";
       document.getElementById("minutes").innerHTML = "00";
-      messageElement.innerHTML = "Let the hackathon begin!";
+      messageElement.innerHTML = "Thanks for hacking with us!";
     }
   }, 1000);
 });
