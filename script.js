@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Set the date we're counting down to
-  var countDownDate = new Date("Sep 13, 2024 14:30:00").getTime();
+  // Set the exact date and time of the hackathon
+  var countDownDate = new Date("Sep 13, 2025 09:00:00").getTime();
 
   // Create a message element
   var messageElement = document.createElement("div");
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
     // Display the result in the respective elements
-    document.getElementById("days").innerHTML = ("0" + days).slice(-2);
+    document.getElementById("days").innerHTML = days.toString();
     document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
     document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
 

@@ -26,6 +26,22 @@
 }
 
 
+@media screen and (max-width: 900px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .gallery-img {
+    height: 250px;
+  }
+  
+  #previous-hackathon {
+    padding: 2rem 1rem;
+    margin: 3rem 1rem;
+  }
+}
+
 @media screen and (max-width: 700px) {
   html, body {
     max-width: 100%;
@@ -162,6 +178,7 @@
 
   .time-box .number {
     font-size: 1.5rem; /* Adjust font size for smaller screens */
+    min-width: 40px; /* Ensure enough space for numbers on smaller screens */
   }
 
   .label {
@@ -173,10 +190,12 @@
   .time-box {
     width: 80px; /* Adjust width for very small screens */
     height: 80px; /* Adjust height for very small screens */
+    padding: 0 5px; /* Add some horizontal padding */
   }
 
   .time-box .number {
     font-size: 1rem; /* Adjust font size for very small screens */
+    min-width: 30px; /* Ensure enough space for numbers on very small screens */
   }
 
   .label {
