@@ -1046,6 +1046,10 @@ footer p {
   color: black;
 }
 
+.faq-answer a{
+	color: #000FFF; /* Link color */	
+	font-weight: bold; /* Make the link text bold */
+}
 /* sections */
 
 .section-wrapper {
