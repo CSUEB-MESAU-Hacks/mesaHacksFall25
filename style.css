@@ -373,6 +373,9 @@ h1 {
 .btn-container3 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .btn {
@@ -381,6 +384,27 @@ h1 {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+}
+
+#registration-button {
+  padding: 12px 32px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  background: linear-gradient(90deg, #2ce0bf 0%, #76dd2c 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(44, 43, 43, 0.15);
+  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+#registration-button:hover {
+  background: linear-gradient(90deg, #e02cbf 0%, #dba62b 100%);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(44, 43, 43, 0.25);
+  transform: translateY(-2px) scale(1.05);
 }
 
 .btn-color-1,
