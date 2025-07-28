@@ -87,12 +87,12 @@ a {
   text-decoration-color: rgb(173, 173, 173);
 }
 
-a:hover {
-  color: #7F3D3D;
+/* a:hover {
+	color: #fff;
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(62, 42, 42);
-}
+} */
 
 .logo {
   font-size: 5rem;
@@ -370,10 +370,6 @@ h1 {
   gap: 1rem;
 }
 
-.btn-container3 {
-  display: flex;
-  justify-content: center;
-}
 
 .btn {
   font-weight: 600;
@@ -574,9 +570,22 @@ h1 {
   animation: color-change-2x 3s infinite alternate;  
   grid-template-columns: auto auto;
   gap: 29rem;
+	text-decoration: none;
 }
-
-
+.register-btn-container{
+	display: flex;
+	justify-content: center;
+	padding:14px 25px;
+}
+.registration-btn{
+	text-decoration: none;
+	color:#ffff;
+	background-color: rgb(0,0,0,0.5);
+	font-size:32px;
+	border: #f7f7f7 2px solid;
+	border-radius: 8px;
+	padding:10px;
+}
 
 /* Schedule SECTION */
 
@@ -813,7 +822,7 @@ h1 {
 }
 
 .gallery-link a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #e02cbf;
 }
 
