@@ -6,11 +6,6 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-
-
-
-
-
 // for meet the teamm
 window.onscroll = function() {scrollFunction()};
 
