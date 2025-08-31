@@ -196,7 +196,8 @@ section:not(#apply) {
 }
 
 section#apply {
-  margin: 4rem 1rem;
+  margin: 6rem 1rem 4rem 1rem;
+  text-align: center;
 }
 
 .section-container {
@@ -1277,7 +1278,7 @@ footer p {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -1305,55 +1306,143 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  /* General mobile centering */
+  section {
+    text-align: center;
+    margin: 2rem 0.5rem;
+  }
+  
+  /* Apply section mobile spacing */
+  section#apply {
+    margin: 4rem 1rem;
+    padding: 2rem 0;
+  }
+  
+  .register-btn-container {
+    padding: 20px 10px;
+  }
+  
+  .registration-btn {
+    font-size: 24px;
+    padding: 12px 20px;
+  }
+  
+  /* Team section mobile layout */
   .team-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-items: center;
+    max-width: 400px;
+    margin-bottom: 2rem;
+  }
+  
+  .each-project {
+    height: 140px;
+    width: 140px;
+    max-width: 140px;
+    flex: 0 0 auto !important;
+    margin: 0;
+  }
+  
+  .img-description {
+    margin: 8px;
+    padding: 4px;
+  }
+  
+  .img-description h2 {
+    font-size: 11px;
+    line-height: 13px;
+    margin-bottom: 3px;
+  }
+  
+  .img-description h2 a {
+    font-size: 11px;
+  }
+  
+  .img-description i, .img-description p, .img-description a {
+    font-size: 9px;
+    line-height: 12px;
+    margin-bottom: 2px;
+  }
+  
+  .img-description strong {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+  
+  /* Hero section mobile centering */
+  .hero-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-left {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .stem-education-title {
+    font-size: 2.5rem;
+  }
+  
+  /* Schedule section mobile centering */
+  .dates-container {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    max-width: 400px;
+    gap: 1.5rem;
+  }
+  
+  .date-box {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* FAQ section mobile centering */
+  .faq-container {
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Gallery mobile centering */
+  .gallery-container {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    gap: 1.5rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Single column for very small screens */
+  .team-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 200px;
   }
   
   .each-project {
     height: 120px;
     width: 120px;
     max-width: 120px;
-    flex: 0 0 auto !important;
+    margin: 0;
   }
   
   .img-description {
-    margin: 5px;
-    padding: 2px;
+    margin: 6px;
+    padding: 3px;
   }
   
   .img-description h2 {
     font-size: 10px;
-    line-height: 11px;
-  }
-  
-  .img-description h2 a {
-    font-size: 10px;
+    line-height: 12px;
   }
   
   .img-description i, .img-description p, .img-description a {
     font-size: 8px;
     line-height: 10px;
-  }
-  
-  .img-description strong {
-    font-size: 9px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Show max 2 per row on very small screens */
-  .team-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .each-project {
-    height: 100px;
-    width: 100px;
-    max-width: 100px;
   }
 }
