@@ -968,9 +968,10 @@ footer p {
 
 #project-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 -3%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .each-project {
@@ -1274,7 +1275,7 @@ footer p {
 .team-row {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 1.5rem;
   margin-bottom: 1rem;
   max-width: 1200px;
@@ -1282,32 +1283,11 @@ footer p {
   margin-right: auto;
 }
 
-/* Ensure max 5 items per row */
+/* Ensure all profiles are perfect circles */
 .team-row .each-project {
   flex: 0 0 auto;
-}
-
-/* For rows with exactly 5 items, distribute evenly */
-.team-row .each-project:nth-child(5n+1):nth-last-child(5),
-.team-row .each-project:nth-child(5n+1):nth-last-child(5) ~ .each-project {
-  flex: 1 1 calc(20% - 1.2rem);
-  max-width: 180px;
-}
-
-/* For rows with less than 5 items, center them */
-.team-row .each-project:nth-child(4n+1):nth-last-child(4),
-.team-row .each-project:nth-child(4n+1):nth-last-child(4) ~ .each-project {
-  flex: 0 0 auto;
-}
-
-.team-row .each-project:nth-child(3n+1):nth-last-child(3),
-.team-row .each-project:nth-child(3n+1):nth-last-child(3) ~ .each-project {
-  flex: 0 0 auto;
-}
-
-.team-row .each-project:nth-child(2n+1):nth-last-child(2),
-.team-row .each-project:nth-child(2n+1):nth-last-child(2) ~ .each-project {
-  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
 }
 
 /* Team section responsive updates */
