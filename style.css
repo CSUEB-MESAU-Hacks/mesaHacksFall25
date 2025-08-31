@@ -191,13 +191,13 @@ a {
 
 section:not(#apply) {
  
-  margin: 0 10rem;
+  margin: 0 1rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
 
 section#apply {
-  margin: 4rem 8rem;
+  margin: 4rem 1rem;
 }
 
 .section-container {
@@ -209,8 +209,98 @@ section#apply {
 #profile {
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  /* height: 80vh; */
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem 0;
+}
+
+.hero-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-left {
+  flex: 1;
+  padding-right: 0.5rem;
+}
+
+.stem-education-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-right .section__text {
+  text-align: center;
+}
+
+.hero-right #countdown-timer {
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+}
+
+.hero-right .time-box {
+  width: 120px;
+  height: 120px;
+  margin: 0 5px;
+}
+
+.hero-right .time-box .number {
+  font-size: 2rem;
+}
+
+.hero-right .time-box .label {
+  font-size: 1rem;
+}
+
+/* Responsive design for hero section */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-left {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .stem-education-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-right .time-box {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .hero-right .time-box .number {
+    font-size: 1.5rem;
+  }
+  
+  .hero-right .time-box .label {
+    font-size: 0.9rem;
+  }
 }
 
 .section__pic-container {
@@ -219,7 +309,7 @@ section#apply {
   width: 700px;
   margin: auto;
   padding-bottom: 2rem;
-  padding-right: 10rem;
+  padding-right: 0rem;
   padding-left: 0rem;
   position: relative; /* Added position relative for absolute positioning */
 }
@@ -335,10 +425,7 @@ h1 {
   text-shadow: 0 10px 25px rgba(112, 88, 88, 0.3); /* Match the text shadow */
 }
 
-.title:hover {
-  transform: scale(1.5);
-  text-shadow: 0 10px 20px rgba(144, 136, 136, 0.2);
-}
+
 
 
 
@@ -438,7 +525,8 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 100px; /* Add space below the countdown timer */
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .time-box {
@@ -710,7 +798,7 @@ h1 {
   width: 200px;
   margin: auto;
   padding-bottom: 2rem;
-  padding-right: 10rem;
+  padding-right: 2rem;
   padding-left: 0rem;
   position: relative; /* Added position relative for absolute positioning */
 }
@@ -725,6 +813,7 @@ h1 {
   margin-left:0;
   margin-right: 25px;
   animation: float 5s ease-in-out infinite;
+  padding-bottom: 1vw;
 }
 
 /* Move section__pic1-container below the contact information */
@@ -747,12 +836,25 @@ h1 {
 /* Previous Hackathon Section */
 #previous-hackathon {
   margin: 5rem auto;
-  padding: 3rem 1rem;
+  padding: 3rem 0.5rem;
   max-width: 1300px;
+  width: 100%;
   position: relative;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#previous-hackathon .title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 10px 25px rgba(112, 88, 88, 0.3);
 }
 
 #previous-hackathon:before {
@@ -783,7 +885,9 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin: 2rem auto;
-  max-width: 1200px;
+  max-width: 1000px;
+  width: 100%;
+  justify-items: center;
 }
 
 .gallery-item {
@@ -792,10 +896,14 @@ h1 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
 }
 
 .gallery-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -804,109 +912,43 @@ h1 {
   height: 300px;
   object-fit: cover;
   transition: all 0.5s ease;
+  display: block;
+  flex-shrink: 0;
 }
 
 .gallery-item:hover .gallery-img {
   transform: scale(1.05);
-  filter: brightness(1.1);
 }
 
 .gallery-caption {
   padding: 1rem;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.75);
+  background: linear-gradient(135deg, rgba(30, 87, 153, 0.9), rgba(44, 224, 191, 0.9));
   color: white;
-  font-size: 1.1rem;
-  border-top: 3px solid #2ce0bf;
-}
-
-.gallery-link {
+  font-weight: 500;
   text-align: center;
-  margin-top: 3rem;
-  font-size: 1.3rem;
-  color: white;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 50px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+  flex-shrink: 0;
 }
 
-.gallery-link a {
-  color: #2ce0bf;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  padding: 0 5px;
+/* Responsive design for previous hackathon section */
+@media (max-width: 768px) {
+  #previous-hackathon {
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+  }
+  
+  .gallery-container {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 1.5rem;
+  }
+  
+  #previous-hackathon .title {
+    font-size: 2.2rem;
+  }
 }
-
-.gallery-link a:hover {
-  text-decoration: none;
-  color: #e02cbf;
-}
-
-/* Updated Schedule Section */
-.dates-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.date-box {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding: 2rem;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.date-box:hover {
-  transform: scale(1.05);
-}
-
-.date-box h2 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.date-box h3 {
-  color: #2ce0bf;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.date-box p {
-  color: white;
-  margin-bottom: 0.5rem;
-}
-
-/* Updated Title for MESA U Hacks 2.0 */
-.section__text__p3 {
-  color: #2ce0bf;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 1rem;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Team Section Updates */
-.team-row {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 2rem;
-}
-
-
-
 /* FOOTER SECTION */
 
 footer {
@@ -931,11 +973,12 @@ footer p {
 
 .each-project {
   position: relative;
-  height: 250px;
-  width: 250px;
-  margin: 3%;
+  height: 150px;
+  width: 150px;
+  margin: 1.5%;
   border-radius: 50%;
   overflow: hidden;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .show {
@@ -947,6 +990,7 @@ footer p {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  aspect-ratio: 1 / 1; /* Ensure 1:1 aspect ratio */
 }
 
 .proj-description {
@@ -979,26 +1023,46 @@ footer p {
   transition: .5s;
   color: #575757;
   text-align: center;
-  margin-left: 25px;
-  margin-right: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
+  margin: 10px;
+  padding: 5px;
 }
 
 .img-description i, .img-description p, .img-description a {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   font-weight: 100;
-  line-height: 24px;
+  line-height: 14px;
   color: #575757;
+  font-size: 10px;
+}
+
+.img-description h2 {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 2px;
+}
+
+.img-description h2 a {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .img-description i {
-  font-size: 12px;
+  font-size: 9px;
 }
 
 .img-description:hover {
   opacity: 1;
+}
+
+/* Leadership role styling */
+.img-description strong {
+  color: #2ce0bf;
+  font-size: 11px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 600;
 }
 
 #project-container::after {
@@ -1056,6 +1120,16 @@ footer p {
 	color: #000FFF; /* Link color */	
 	font-weight: bold; /* Make the link text bold */
 }
+
+.faq-answer ul {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.faq-answer li {
+  margin-bottom: 0.25rem;
+}
+
 /* sections */
 
 .section-wrapper {
@@ -1064,6 +1138,8 @@ footer p {
   position: relative;
   height: 100%;
   max-height: 900px;
+  padding-top: 0vw;
+  padding-bottom: 10vw;
 }
 
 
@@ -1129,9 +1205,111 @@ footer p {
   gap: 20px; /* Add horizontal space between the circles */
 }
 
-.each-project {
-  flex-grow: 1; /* Allow items to grow and fill the space */
-  flex-basis: calc(33.33% - 40px); /* Adjust the width to fit three items per row, accounting for the gap */
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-  margin: 20px 10px; /* Add vertical and horizontal margin to create space between items */
+/* Team member containers should maintain fixed circular dimensions */
+#project-container .each-project {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin: 10px 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Updated Schedule Section */
+.dates-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+
+}
+
+.date-box {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.date-box:hover {
+  transform: scale(1.05);
+}
+
+.date-box h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.date-box h3 {
+  color: #2ce0bf;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.date-box p {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+/* Updated Title for MESA U Hacks 2.0 */
+.section__text__p3 {
+  color: #2ce0bf;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Team Section Updates */
+.team-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Team section responsive updates */
+@media (max-width: 768px) {
+  .team-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .each-project {
+    height: 120px;
+    width: 120px;
+    max-width: 120px;
+  }
+  
+  .img-description {
+    margin: 5px;
+    padding: 2px;
+  }
+  
+  .img-description h2 {
+    font-size: 10px;
+    line-height: 11px;
+  }
+  
+  .img-description h2 a {
+    font-size: 10px;
+  }
+  
+  .img-description i, .img-description p, .img-description a {
+    font-size: 8px;
+    line-height: 10px;
+  }
+  
+  .img-description strong {
+    font-size: 9px;
+  }
 }
