@@ -1274,22 +1274,69 @@ footer p {
 .team-row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin-bottom: 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure max 5 items per row */
+.team-row .each-project {
+  flex: 0 0 auto;
+}
+
+/* For rows with exactly 5 items, distribute evenly */
+.team-row .each-project:nth-child(5n+1):nth-last-child(5),
+.team-row .each-project:nth-child(5n+1):nth-last-child(5) ~ .each-project {
+  flex: 1 1 calc(20% - 1.2rem);
+  max-width: 180px;
+}
+
+/* For rows with less than 5 items, center them */
+.team-row .each-project:nth-child(4n+1):nth-last-child(4),
+.team-row .each-project:nth-child(4n+1):nth-last-child(4) ~ .each-project {
+  flex: 0 0 auto;
+}
+
+.team-row .each-project:nth-child(3n+1):nth-last-child(3),
+.team-row .each-project:nth-child(3n+1):nth-last-child(3) ~ .each-project {
+  flex: 0 0 auto;
+}
+
+.team-row .each-project:nth-child(2n+1):nth-last-child(2),
+.team-row .each-project:nth-child(2n+1):nth-last-child(2) ~ .each-project {
+  flex: 0 0 auto;
 }
 
 /* Team section responsive updates */
+@media (max-width: 1024px) {
+  .team-row {
+    max-width: 800px;
+  }
+  
+  /* Show max 4 per row on medium screens */
+  .team-row .each-project:nth-child(4n+1):nth-last-child(4),
+  .team-row .each-project:nth-child(4n+1):nth-last-child(4) ~ .each-project {
+    flex: 1 1 calc(25% - 1.2rem);
+    max-width: 160px;
+  }
+}
+
 @media (max-width: 768px) {
   .team-row {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    max-width: 400px;
   }
   
   .each-project {
     height: 120px;
     width: 120px;
     max-width: 120px;
+    flex: 0 0 auto !important;
   }
   
   .img-description {
@@ -1313,5 +1360,20 @@ footer p {
   
   .img-description strong {
     font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Show max 2 per row on very small screens */
+  .team-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .each-project {
+    height: 100px;
+    width: 100px;
+    max-width: 100px;
   }
 }
