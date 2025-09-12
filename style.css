@@ -2,29 +2,42 @@
 
 /* Fonts now loaded in HTML head for better performance */
 
-* {
-  margin: 0;
-  padding: 0;
+*, *::before, *::after {
+  box-sizing: border-box;
+  /* outline: 1px solid red;  */
+  /* ^ DEBUG outlines to visualize element boundaries */
 }
 
+/* DEBUG Vertical red line in the center of the screen for alignment purposes */
+/* body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50vw;
+  width: 2px;
+  height: 100%;
+  background: red;
+  z-index: 9999;
+  pointer-events: none;
+} */
 
 /* grdiante background code https://cssgradient.io */ 
 body {
-  
-font-family: "Poppins", sans-serif;
-background: linear-gradient(to right, 
-  #1e579984 0%, 
-  #2ce0bf87 8%,   /* Adjusted color stop */
-  #76dd2c81 25%,   /* Adjusted color stop */
-  #dba62b8d 40%,   /* Adjusted color stop */
-  #e02cbf8f 60%,   /* Adjusted color stop */
-  #1e5799 75%,     /* Adjusted color stop */
-  #1e579984 100%   /* Repetition of the first color for smooth transition */
-);
-background-size: 1000% 100%;
-animation: bg 20s linear infinite;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, 
+    #1e579984 0%, 
+    #2ce0bf87 8%,   /* Adjusted color stop */
+    #76dd2c81 25%,   /* Adjusted color stop */
+    #dba62b8d 40%,   /* Adjusted color stop */
+    #e02cbf8f 60%,   /* Adjusted color stop */
+    #1e5799 75%,     /* Adjusted color stop */
+    #1e579984 100%   /* Repetition of the first color for smooth transition */
+  );
+  background-size: 1000% 100%;
+  animation: bg 20s linear infinite;
 
-
+  overflow: hidden;
+  justify-items: center;
 }
 
 @keyframes bg {
@@ -60,6 +73,8 @@ a,
 
 #desktop-nav {
   display: flex;
+  min-width: 100%;
+  justify-items: space-between;
 }
 
 nav,
@@ -101,36 +116,8 @@ a {
   width: 150px; height: 75px;
 }
 
-
 .logo:hover {
   cursor: default;
-}
-
-/* HAMBURGER MENU */
-
-#hamburger-nav {
-  display: none;
-}
-
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-}
-
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  transition: all 0.2 ease-in-out;
 }
 
 .menu-links {
@@ -162,30 +149,6 @@ a {
   max-height: 300px;
 }
 
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
 
 section:not(#apply) {
@@ -202,6 +165,14 @@ section#apply {
 
 .section-container {
   display: flex;
+}
+
+/* Ensure side-by-side layout for both sections on wide screens */
+.about-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2rem;
 }
 
 /* PROFILE SECTION */
@@ -274,36 +245,6 @@ section#apply {
 
 .hero-right .time-box .label {
   font-size: 1rem;
-}
-
-/* Responsive design for hero section */
-@media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .hero-left {
-    padding-right: 0;
-    text-align: center;
-  }
-  
-  .stem-education-title {
-    font-size: 2.5rem;
-  }
-  
-  .hero-right .time-box {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .hero-right .time-box .number {
-    font-size: 1.5rem;
-  }
-  
-  .hero-right .time-box .label {
-    font-size: 0.9rem;
-  }
 }
 
 .section__pic-container {
@@ -390,11 +331,20 @@ section#apply {
 }
 
 .concept-two {
-  display: flex;
+  /* display: flex;
   font-size: 3.5rem;
   justify-content: center;
   padding: 0em 0em;
   margin-bottom: 0rem;
+   */
+  display: flex;
+  font-size: 3.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .hover {
@@ -426,10 +376,9 @@ h1 {
   position: relative;
   color: #fff; 
   text-shadow: 0 10px 25px rgba(112, 88, 88, 0.3); /* Match the text shadow */
+  margin-top: 0;
+  padding-top: 0;
 }
-
-
-
 
 
 /* Add styles for the socials-container and icons */
@@ -571,15 +520,9 @@ h1 {
   display: flex;
 }
 
-.section-wrapper {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-}
-
 .section-body {
   width: 100%;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 .title {
@@ -640,7 +583,11 @@ h1 {
   position: relative; /* Added position relative for absolute positioning */
 }*/
 
-
+.about-text {
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
 
 .arrow {
   position: absolute;
@@ -669,8 +616,6 @@ h1 {
   align-items: normal;
   margin: auto 0;
 }
-
-
 
 
 /* apply */
@@ -935,23 +880,6 @@ h1 {
   flex-shrink: 0;
 }
 
-/* Responsive design for previous hackathon section */
-@media (max-width: 768px) {
-  #previous-hackathon {
-    margin: 3rem auto;
-    padding: 2rem 1rem;
-  }
-  
-  .gallery-container {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    gap: 1.5rem;
-  }
-  
-  #previous-hackathon .title {
-    font-size: 2.2rem;
-  }
-}
 /* FOOTER SECTION */
 
 footer {
@@ -971,8 +899,9 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
 .each-project {
@@ -1083,6 +1012,13 @@ footer p {
 /* Frequently Asked Questions */
 /* Base settings to ensure consistency */
 
+.faq {
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  min-width: 95%;
+  margin: 2rem auto;
+}
+
 .faq-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -1141,9 +1077,9 @@ footer p {
   margin: 0 auto;
   position: relative;
   height: 100%;
-  max-height: 900px;
   padding-top: 0vw;
   padding-bottom: 10vw;
+  justify-items: center;
 }
 
 
@@ -1321,6 +1257,7 @@ footer p {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Ensure all profiles are perfect circles */

@@ -17,68 +17,71 @@
 
 
   <body>
+    <!-- Desktop nav -->
     <nav id="desktop-nav">      
       <div class="logo">
-          <img
-            src="./assets/mesaLogo.png"
-            alt="Mesa Logo"
-            class="icon"
-            onclick="location.href='https://mesa.ucop.edu'"
-          />
-   </div>
-
-    <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#apply">Apply</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#team-section">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <img
+          src="./assets/mesaLogo.png"
+          alt="Mesa Logo"
+          class="icon"
+          onclick="location.href='https://mesa.ucop.edu'"
+        />
       </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#apply">Apply</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#team-section">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
+
+    <!-- Mobile nav -->
     <nav id="hamburger-nav">
       <div class="logo">
-          <img
-            src="./assets/mesaLogo.png"
-            alt="Mesa Logo"
-            class="icon"
-            onclick="location.href='https://mesa.ucop.edu'"
-          />
+        <img
+          src="./assets/mesaLogo.png"
+          alt="Mesa Logo"
+          class="icon"
+          onclick="location.href='https://mesa.ucop.edu'"
+        />
+      </div>
       <div class="hamburger-menu" onclick="toggleMenu()">
         <div class="hamburger-icon">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
+      </div>
+      <div class="menu-links">
+        <ul>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#apply" onclick="toggleMenu()">Apply</a></li>
           <li><a href="#schedule" onclick="toggleMenu()">Schedule</a></li>
           <li><a href="#team-section" onclick="toggleMenu()">Team</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+        </ul>
       </div>
     </nav>
-
-
    
     <section id="profile">
       <div class="hero-container">
         <div class="hero-left">
           <h1 class="stem-education-title">Hack for STEM EDUCATION</h1>
-          <div class="about-section">
-            <p class="hero-description">A hackathon where your creative ideas become reality. 
-               The possibilities are limitless.
-                  Do something you've never done before. Let's HACK!</p>
-          </div>
+            <div class="about-section" style="max-width: 420px; margin-top: 18px; font-size: 1.1rem; line-height: 1.5;">
+            <p class="hero-description" style="margin: 0;">
+              A hackathon where your creative ideas become reality. 
+              The possibilities are limitless.
+              Do something you've never done before. Let's HACK!
+            </p>
+            </div>
         </div>
         
         <div class="hero-right">
           <div class="section__text">
             <h1 class="section__text__p1">SEPTEMBER 13-14, 2025</h1>
-            <div class="concept concept-two">
+            <div class="concept-two">
               <div class="hover">
                 <h1>M</h1>
               </div>
@@ -154,14 +157,14 @@
       </div>
     </section>
     <section id="about">
-      <div class="section-wrapper">
+      <div class="section-wrapper about-flex">
         <div class="section-body">
           <h3 class="title" id="hack-title">Come Hack with Us</h3>
           <div class="about-content-container">
-            <div class="left-content">
+            <div class="about-text">
               <p>A hackathon where your crazy ideas become reality. 
-               The possibilities are limitless.
-                  o something you've never done before. Let's HACK!</p>
+                The possibilities are limitless.
+                Do something you've never done before. Let's HACK!</p>
               <h2>Location</h2>
               <p>MESA U HACKS will take place at <a href="https://www.csueastbay.edu/about/visitor-information/hayward-campus-map.html">California State University East Bay</a>, in Hayward Campus. The address is: <a href="https://www.google.com/maps/place/California+State+University,+East+Bay/@37.6566086,-122.0571725,17z/data=!4m10!1m2!2m1!1scsueb+address!3m6!1s0x808f938a2a66cb0f:0x6e8f52a8e9002934!8m2!3d37.6560295!4d-122.0561984!15sCg1jc3VlYiBhZGRyZXNzIgJIAZIBEXB1YmxpY191bml2ZXJzaXR54AEA!16zL20vMDJrMHBu?entry=ttu">25800 Carlos Bee Blvd, Hayward, CA 94542</a></p>
               <p> <a href='https://discord.gg/DRM5dBdEhH'><strong>CSUEB MESA Discord Link</strong></a></p>
@@ -173,9 +176,8 @@
           <img src="./assets/mesau.webp" alt="MESA-U group">
         </div>
       </div>
-      <div class="slant bottom left"></div>
     </section>
-    
+
     <!-- Previous Hackathon Photos Section -->
     <div class="section-wrapper">
       <section id="previous-hackathon">
@@ -207,7 +209,7 @@
     <h1 class="title">
     	Registration
     </h1>
-		<hr>
+    <hr>
 		<div class="register-btn-container">
 			<button class="registration-btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSe9mGMe0qcd5WD2Dx1-NF14Mfkl4usv_jT4biffwe7TatLQ8w/viewform?pli=1';">
 				Click Here
@@ -303,7 +305,7 @@
         <div class="proj-description container column">
           <div class="img-description">
             <h2>
-              <a href="#" target="_blank" rel="noopener noreferrer">Josiah Troup</a>
+              <a href="https://www.linkedin.com/in/josiah-troup-95a45532a/" target="_blank" rel="noopener noreferrer">Josiah Troup</a>
             </h2>
             <p>Student</p>
             <i>CSU East Bay</i>
@@ -317,7 +319,7 @@
         <div class="proj-description container column">
           <div class="img-description">
             <h2>
-              <a href="#" target="_blank" rel="noopener noreferrer">Jacob Ativo</a>
+              <a href="https://www.linkedin.com/in/jacob-ativo-awesome-programmer/" target="_blank" rel="noopener noreferrer">Jacob Ativo</a>
             </h2>
             <p>Student</p>
             <i>CSU East Bay</i>
@@ -331,7 +333,7 @@
         <div class="proj-description container column">
           <div class="img-description">
             <h2>
-              <a href="#" target="_blank" rel="noopener noreferrer">Wail Mohammed</a>
+              <a href="https://www.linkedin.com/in/wailmohammed/" target="_blank" rel="noopener noreferrer">Wail Mohammed</a>
             </h2>
             <p>Student</p>
             <i>CSU East Bay</i>
@@ -433,11 +435,11 @@
 
       <!-- Eli Chavez -->
       <div class="each-project grads">
-        <img class="proj-img" src="assets/placeholder.webp" alt="Eli Chavez">
+        <img class="proj-img" src="assets/elisha.webp" alt="Elisha Chavez">
         <div class="proj-description container column">
           <div class="img-description">
             <h2>
-              <a href="#" target="_blank" rel="noopener noreferrer">Eli Chavez</a>
+              <a href="https://www.linkedin.com/in/elisha-chavez-835214356/" target="_blank" rel="noopener noreferrer">Elisha Chavez</a>
             </h2>
             <p>Student</p>
             <i>Chabot College</i>
@@ -447,11 +449,11 @@
 
       <!-- Stephanie Burciaga -->
       <div class="each-project grads">
-        <img class="proj-img" src="assets/placeholder.webp" alt="Stephanie Burciaga">
+        <img class="proj-img" src="assets/stephanie.webp" alt="Stephanie Burciaga">
         <div class="proj-description container column">
           <div class="img-description">
             <h2>
-              <a href="#" target="_blank" rel="noopener noreferrer">Stephanie Burciaga</a>
+              <a href="https://www.linkedin.com/in/srciaga/" target="_blank" rel="noopener noreferrer">Stephanie Burciaga</a>
             </h2>
             <p>Student</p>
             <i>Chabot College</i>
@@ -576,7 +578,7 @@
 
 
     <footer>
-		<div class="section__pic1-container">
+		    <div class="section__pic1-container">
           <img src="./assets/smallLogo.png" alt="MESA U Hacks Logo" />
         </div>
       <p>Made by MESA U HACKS Team </p>
