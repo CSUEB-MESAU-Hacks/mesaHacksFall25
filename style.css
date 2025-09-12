@@ -1084,7 +1084,7 @@ footer p {
 /* Base settings to ensure consistency */
 
 .faq-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -1260,6 +1260,45 @@ footer p {
 .date-box p {
   color: white;
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.date-box h4 {
+  color: #2ce0bf;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.schedule-details {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.schedule-details p {
+  margin: 0.8rem 0;
+  line-height: 1.4;
+}
+
+.schedule-details strong {
+  color: #2ce0bf;
+}
+
+/* Updated scrollbar for schedule */
+.schedule-details::-webkit-scrollbar {
+  width: 8px;
+}
+
+.schedule-details::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.schedule-details::-webkit-scrollbar-thumb {
+  background: #2ce0bf;
+  border-radius: 4px;
 }
 
 /* Updated Title for MESA U Hacks 2.0 */
@@ -1309,13 +1348,64 @@ footer p {
   /* General mobile centering */
   section {
     text-align: center;
-    margin: 2rem 0.5rem;
+    margin: 3rem 0.5rem;
   }
   
-  /* Apply section mobile spacing */
+  /* About section mobile fixes - "Come Hack with Us" */
+  #about {
+    flex-direction: column;
+    text-align: center;
+    margin: 3rem 1rem 5rem 1rem;
+    padding-bottom: 3rem;
+  }
+  
+  .section-wrapper {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .section-body {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .left-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  
+  .section-image {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Previous hackathon section spacing fix - prevent overlap */
+  #previous-hackathon {
+    margin: 15rem auto 8rem auto;
+    padding: 3rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Apply section mobile spacing - fix overlap with both directions */
   section#apply {
-    margin: 4rem 1rem;
-    padding: 2rem 0;
+    margin: 8rem 1rem 6rem 1rem;
+    padding: 3rem 0;
+    clear: both;
+    position: relative;
+    z-index: 2;
   }
   
   .register-btn-container {
@@ -1325,6 +1415,14 @@ footer p {
   .registration-btn {
     font-size: 24px;
     padding: 12px 20px;
+  }
+  
+  /* Schedule section spacing fix - prevent overlap */
+  #schedule {
+    margin: 6rem 1rem 4rem 1rem;
+    padding: 3rem 0;
+    position: relative;
+    z-index: 1;
   }
   
   /* Team section mobile layout */
@@ -1402,7 +1500,44 @@ footer p {
   /* FAQ section mobile centering */
   .faq-container {
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    max-width: 98%;
+    width: 100%;
+  }
+  
+  .faq-item {
+    margin: 0 auto 1rem auto;
+    width: 100%;
+  }
+  
+  .faq-question {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Contact section mobile centering */
+  #contact {
+    text-align: center;
+    margin: 4rem 1rem;
+  }
+  
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 300px;
+  }
+  
+  .contact-info-container {
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  
+  /* Hide entire about section content on mobile */
+  #about .section-body {
+    display: none;
   }
   
   /* Gallery mobile centering */
@@ -1444,5 +1579,40 @@ footer p {
   .img-description i, .img-description p, .img-description a {
     font-size: 8px;
     line-height: 10px;
+  }
+  
+  /* Hide entire about section content on very small mobile */
+  #about .section-body {
+    display: none;
+  }
+  
+  /* FAQ section stretched and centered for very small mobile */
+  .faq-container {
+    margin: 0 auto;
+    padding: 0 0.25rem;
+    max-width: 99%;
+    width: 100%;
+  }
+  
+  .faq-item {
+    margin: 0 auto 1rem auto;
+    width: 100%;
+  }
+  
+  .faq-question {
+    text-align: center;
+    width: 100%;
+    padding: 0.8rem;
+  }
+  
+  .faq-answer {
+    padding: 0.8rem;
+    text-align: center;
+  }
+  
+  /* Push down previous hackathon section on very small mobile */
+  #previous-hackathon {
+    margin: 18rem auto 8rem auto;
+    padding: 3rem 1rem;
   }
 }
