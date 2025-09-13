@@ -432,6 +432,7 @@
     flex-direction: column;
     gap: 0.5rem;
     cursor: pointer;
+    padding-right: 16px;
   }
   .hamburger-icon span {
     width: 2rem;
