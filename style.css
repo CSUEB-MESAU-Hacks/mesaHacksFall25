@@ -1,37 +1,17 @@
-/* GENERAL */
-
-/* Fonts now loaded in HTML head for better performance */
-
 *, *::before, *::after {
   box-sizing: border-box;
-  /* outline: 1px solid red;  */
-  /* ^ DEBUG outlines to visualize element boundaries */
 }
 
-/* DEBUG Vertical red line in the center of the screen for alignment purposes */
-/* body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 50vw;
-  width: 2px;
-  height: 100%;
-  background: red;
-  z-index: 9999;
-  pointer-events: none;
-} */
-
-/* grdiante background code https://cssgradient.io */ 
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to right, 
     #1e579984 0%, 
-    #2ce0bf87 8%,   /* Adjusted color stop */
-    #76dd2c81 25%,   /* Adjusted color stop */
-    #dba62b8d 40%,   /* Adjusted color stop */
-    #e02cbf8f 60%,   /* Adjusted color stop */
-    #1e5799 75%,     /* Adjusted color stop */
-    #1e579984 100%   /* Repetition of the first color for smooth transition */
+    #2ce0bf87 8%,   
+    #76dd2c81 25%,  
+    #dba62b8d 40%,  
+    #e02cbf8f 60%,   
+    #1e5799 75%,     
+    #1e579984 100%  
   );
   background-size: 1000% 100%;
   animation: bg 20s linear infinite;
@@ -62,14 +42,12 @@ p {
   color: white;
 }
 
-/* TRANSITION */
 
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
 
 #desktop-nav {
   display: flex;
@@ -101,12 +79,6 @@ a {
   text-decoration-color: rgb(173, 173, 173);
 }
 
-/* a:hover {
-	color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(62, 42, 42);
-} */
 
 .logo {
   font-size: 5rem;
@@ -149,7 +121,7 @@ a {
   max-height: 300px;
 }
 
-/* SECTIONS */
+
 
 section:not(#apply) {
  
@@ -167,7 +139,7 @@ section#apply {
   display: flex;
 }
 
-/* Ensure side-by-side layout for both sections on wide screens */
+
 .about-flex {
   display: flex;
   flex-direction: row;
@@ -175,7 +147,7 @@ section#apply {
   gap: 2rem;
 }
 
-/* PROFILE SECTION */
+
 
 #profile {
   display: flex;
@@ -255,14 +227,13 @@ section#apply {
   padding-bottom: 2rem;
   padding-right: 0rem;
   padding-left: 0rem;
-  position: relative; /* Added position relative for absolute positioning */
+  position: relative; 
 }
 
-/* Add styles for the levitating effect */
 .section__pic-container img {
   filter: drop-shadow(0 0 0.75rem rgba(100, 94, 97, 0.58));
-  width: 100%; /* Make sure the image takes the full width of the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  height: auto; 
   position: absolute;
   bottom: 4;
   margin-left:0;
@@ -303,16 +274,16 @@ section#apply {
   font-family: 'Poppins', sans-serif;
   margin-bottom: 0rem;
   margin-top: 0rem;
-  color: #fff; /* Change this to the desired text color */
+  color: #fff;
 }
 
 .section__text__p1::after {
-  content: ''; /* Adding a pseudo-element for the border */
+  content: ''; 
   display: block;
   width: 100%;
-  height: 1px; /* Set the desired border height */
-  background-color: #407040c9; /* Change this to the desired border color */
-  margin-top: 10px; /* Adjust the margin as needed */
+  height: 1px; 
+  background-color: #407040c9; 
+  margin-top: 10px; 
 }
 .section__text__p2 {
   text-align: center;
@@ -322,36 +293,24 @@ section#apply {
   color: #a33535eb;
 }
 .section__text__p2::before {
-  content: ''; /* Adding a pseudo-element for the border */
+  content: ''; 
   display: block;
   width: 100%;
-  height: 1px; /* Set the desired border height */
-  background-color: #407040c9; /* Change this to the desired border color */
-  margin-top: 10px; /* Adjust the margin as needed */
+  height: 1px; 
+  background-color: #407040c9; 
+  margin-top: 10px; 
 }
 
 .concept-two {
-  /* display: flex;
-  font-size: 3.5rem;
-  justify-content: center;
-  padding: 0em 0em;
-  margin-bottom: 0rem;
-   */
   display: flex;
-  font-size: 3.5rem;
+  flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 100vw;
-  overflow-x: hidden;
-  margin: 0 auto;
-  box-sizing: border-box;
+  gap: 8px;
 }
 
 .hover {
   position: relative;
-  margin: 5% 0 /* Adjust the margin as needed */
-  scale(1.2);
-
+  transform: scale(1.2);
 }
 
 h1 {
@@ -1175,6 +1134,80 @@ footer p {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+}
+
+/* Theme and Categories Sections */
+#theme-categories {
+  margin: 4rem 1rem;
+  padding: 2rem 0;
+}
+
+.theme-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.theme-title {
+  font-size: 2.5rem;
+  color: #2ce0bf;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.categories-section {
+  margin-top: 4rem;
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.category-box {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.category-box h3 {
+  color: #2ce0bf;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.category-box p {
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.prize {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.prize h4 {
+  color: #dba62b;
+  margin-bottom: 0.5rem;
+}
+
+.prize p {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 .date-box:hover {
