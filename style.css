@@ -17,6 +17,7 @@ body {
   animation: bg 20s linear infinite;
 
   overflow: hidden;
+  display: grid;
   justify-items: center;
 }
 
@@ -36,6 +37,7 @@ html {
 html, body {
   max-width: 100%;
   overflow-x: hidden; /* Prevents horizontal scroll */ 
+  margin: 0;
 }
 
 p {
@@ -477,6 +479,7 @@ h1 {
 /* ABOUT SECTION */
 #about {
   display: flex;
+  max-width: 95%;
 }
 
 .section-body {
@@ -1030,7 +1033,6 @@ footer p {
 }
 
 /* sections */
-
 .section-wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -1038,7 +1040,11 @@ footer p {
   height: 100%;
   padding-top: 0vw;
   padding-bottom: 10vw;
-  justify-items: center;
+
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  flex-direction: row;  /* if you want stacking */
 }
 
 
@@ -1335,289 +1341,6 @@ footer p {
   height: 150px;
 }
 
-/* Team section responsive updates */
-@media (max-width: 1024px) {
-  .team-row {
-    max-width: 800px;
-  }
-  
-  /* Show max 4 per row on medium screens */
-  .team-row .each-project:nth-child(4n+1):nth-last-child(4),
-  .team-row .each-project:nth-child(4n+1):nth-last-child(4) ~ .each-project {
-    flex: 1 1 calc(25% - 1.2rem);
-    max-width: 160px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* General mobile centering */
-  section {
-    text-align: center;
-    margin: 3rem 0.5rem;
-  }
-  
-  /* About section mobile fixes - "Come Hack with Us" */
-  #about {
-    flex-direction: column;
-    text-align: center;
-    margin: 3rem 1rem 5rem 1rem;
-    padding-bottom: 3rem;
-  }
-  
-  .section-wrapper {
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .section-body {
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    width: 100%;
-  }
-  
-  .left-content {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 90%;
-  }
-  
-  .section-image {
-    margin-top: 2rem;
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Previous hackathon section spacing fix - prevent overlap */
-  #previous-hackathon {
-    margin: 15rem auto 8rem auto;
-    padding: 3rem 1rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Apply section mobile spacing - fix overlap with both directions */
-  section#apply {
-    margin: 8rem 1rem 6rem 1rem;
-    padding: 3rem 0;
-    clear: both;
-    position: relative;
-    z-index: 2;
-  }
-  
-  .register-btn-container {
-    padding: 20px 10px;
-  }
-  
-  .registration-btn {
-    font-size: 24px;
-    padding: 12px 20px;
-  }
-  
-  /* Schedule section spacing fix - prevent overlap */
-  #schedule {
-    margin: 6rem 1rem 4rem 1rem;
-    padding: 3rem 0;
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Team section mobile layout */
-  .team-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    justify-items: center;
-    max-width: 400px;
-    margin-bottom: 2rem;
-  }
-  
-  .each-project {
-    height: 140px;
-    width: 140px;
-    max-width: 140px;
-    flex: 0 0 auto !important;
-    margin: 0;
-  }
-  
-  .img-description {
-    margin: 8px;
-    padding: 4px;
-  }
-  
-  .img-description h2 {
-    font-size: 11px;
-    line-height: 13px;
-    margin-bottom: 3px;
-  }
-  
-  .img-description h2 a {
-    font-size: 11px;
-  }
-  
-  .img-description i, .img-description p, .img-description a {
-    font-size: 9px;
-    line-height: 12px;
-    margin-bottom: 2px;
-  }
-  
-  .img-description strong {
-    font-size: 10px;
-    margin-bottom: 3px;
-  }
-  
-  /* Hero section mobile centering */
-  .hero-container {
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
-  }
-  
-  .hero-left {
-    padding-right: 0;
-    text-align: center;
-  }
-  
-  .stem-education-title {
-    font-size: 2.5rem;
-  }
-  
-  /* Schedule section mobile centering */
-  .dates-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .date-box {
-    max-width: 280px;
-    margin: 0 auto;
-  }
-  
-  /* FAQ section mobile centering */
-  .faq-container {
-    margin: 0 auto;
-    padding: 0 0.5rem;
-    max-width: 98%;
-    width: 100%;
-  }
-  
-  .faq-item {
-    margin: 0 auto 1rem auto;
-    width: 100%;
-  }
-  
-  .faq-question {
-    text-align: center;
-    width: 100%;
-  }
-  
-  /* Contact section mobile centering */
-  #contact {
-    text-align: center;
-    margin: 4rem 1rem;
-  }
-  
-  .contact-info-upper-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin: 2rem auto;
-    max-width: 300px;
-  }
-  
-  .contact-info-container {
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem;
-  }
-  
-  /* Hide entire about section content on mobile */
-  #about .section-body {
-    display: none;
-  }
-  
-  /* Gallery mobile centering */
-  .gallery-container {
-    grid-template-columns: 1fr;
-    max-width: 350px;
-    gap: 1.5rem;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Single column for very small screens */
-  .team-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
-    max-width: 200px;
-  }
-  
-  .each-project {
-    height: 120px;
-    width: 120px;
-    max-width: 120px;
-    margin: 0;
-  }
-  
-  .img-description {
-    margin: 6px;
-    padding: 3px;
-  }
-  
-  .img-description h2 {
-    font-size: 10px;
-    line-height: 12px;
-  }
-  
-  .img-description i, .img-description p, .img-description a {
-    font-size: 8px;
-    line-height: 10px;
-  }
-  
-  /* Hide entire about section content on very small mobile */
-  #about .section-body {
-    display: none;
-  }
-  
-  /* FAQ section stretched and centered for very small mobile */
-  .faq-container {
-    margin: 0 auto;
-    padding: 0 0.25rem;
-    max-width: 99%;
-    width: 100%;
-  }
-  
-  .faq-item {
-    margin: 0 auto 1rem auto;
-    width: 100%;
-  }
-  
-  .faq-question {
-    text-align: center;
-    width: 100%;
-    padding: 0.8rem;
-  }
-  
-  .faq-answer {
-    padding: 0.8rem;
-    text-align: center;
-  }
-  
-  /* Push down previous hackathon section on very small mobile */
-  #previous-hackathon {
-    margin: 18rem auto 8rem auto;
-    padding: 3rem 1rem;
-  }
+#hamburger-nav {
+  display: none; /* Hidden by default */
 }
